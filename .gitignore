@@ -1,0 +1,67 @@
+# Build output
+target/
+build/
+*.jar
+*.war
+*.class
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# IDE - IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# IDE - Eclipse/STS
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+# IDE - NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# IDE - VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Logs
+*.log
+logs/
+
+# Temp files
+*.tmp
+*.temp
+*.bak
+
+# Docker volumes (local)
+data/
+postgres_data/
+minio_data/
+
+# Environment files with secrets
+.env
+.env.local
+*.env
+
+# Video script files (personal notes)
+VIDEO_*.md
+
+# Generated docs
+HELP.md

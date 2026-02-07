@@ -1,0 +1,35 @@
+# Тестовый профиль - используется для unit тестов
+spring:
+  application:
+    name: file-uploader-test
+  
+  # H2 in-memory база для тестов
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+    username: sa
+    password: 
+    driver-class-name: org.h2.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+# MinIO настройки (mock)
+minio:
+  endpoint: http://localhost:9000
+  access-key: test
+  secret-key: test
+  bucket-name: test-bucket
+
+# Отключаем логирование в тестах
+logging:
+  level:
+    root: WARN
